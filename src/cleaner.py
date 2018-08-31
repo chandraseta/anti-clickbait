@@ -10,7 +10,7 @@ links = list(set(links))
 
 # Remove pictures (foto.kompas.com)
 for idx, link in enumerate(links):
-    if 'foto.kompas.com' in link or 'pubads' in link or '/jeo/' in link:
+    if 'foto.kompas.com' in link or 'pubads' in link or '/jeo/' in link or '/galeri/' in link:
         del links[idx]
 
 cleanfile = open('../data/kompas-links-clean.txt', 'r')
