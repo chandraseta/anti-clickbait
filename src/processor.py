@@ -9,8 +9,8 @@ for idx, line in enumerate(rawfile):
         line = line[3:]
         raw_data.append(line)
 
-titlefile = open('../data/kompas-data-titles.txt', 'a+')
-contentfile = open('../data/kompas-data-contents.txt', 'a+')
+titlefile = open('../data/kompas-data-titles.txt', 'w+')
+contentfile = open('../data/kompas-data-contents.txt', 'w+')
 
 for data in raw_data:
     title = data.split('|')[0]
