@@ -20,9 +20,6 @@ for line in linkfile:
     if line not in crawled_links:
         links.append(line)
 
-
-titlefile = open('../data/kompas-titles.txt', 'a+')
-datafile = open('../data/kompas-data.txt', 'a+')
 crawledfile = open('../data/kompas-links-crawled.txt', 'a+')
 
 rawfile = open('../data/kompas-raw.txt', 'a+')
@@ -41,17 +38,12 @@ for link in links:
     rawfile.write(' | ')
 
     for title in titles:
-        # titlefile.write(title.text)
         rawfile.write(title.text)
 
     rawfile.write(' | ')
 
     for par in paragraphs:
-        # datafile.write(par.text)
         rawfile.write(par.text)
-
-    # titlefile.write('\n')
-    # datafile.write('\n')
 
     rawfile.write('\n')
 
