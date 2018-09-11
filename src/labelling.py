@@ -26,7 +26,8 @@ else:
     while index < len(titles) and not stop:
         choice = ''
         while choice not in ['y', 'n', 's']:
-            choice = input('{}\n\nType s to stop labelling\nIs it a clickbait? [y/n] '.format(titles[index]))
+            os.system('clear')
+            choice = input('{}\n{}\n\nType s to stop labelling\nIs it a clickbait? [y/n] '.format(index+1, titles[index]))
         if choice == 'y':
             labels.append('clickbait')
         elif choice == 'n':
