@@ -4,4 +4,6 @@ dependencies:
 - pip
 - pip:
   - beautifulsoup4
+  - numpy
+  - pandas
   - requests
