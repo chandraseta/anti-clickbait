@@ -11,11 +11,13 @@ titlefile = open('../data/kompas-data-titles.txt', 'r')
 titles = []
 
 for line in titlefile:
-    titles.append(line.strip())
+    line = line.strip()
+    line = line.replace('?', ' ?')
+    line = line.replace('!', ' !')
+    titles.append(line)
 
 # Slice the number of titles to match the number of labels
 titles = titles[:len(labels)]
 
-
 dataframe = pd.DataFrame({'labels': labels, 'titles': titles})
-dataframe.to_csv('../data/kompas-titles.csv', sep=',', index=False)
+dataframe.to_csv('../data/kompas-titles.csv', encoding='utf-8', sep='|', index= False, quoting=3, escapechar='\\')
