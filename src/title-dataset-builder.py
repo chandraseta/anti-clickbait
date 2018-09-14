@@ -12,8 +12,6 @@ titles = []
 
 for line in titlefile:
     line = line.strip()
-    line = line.replace('?', ' ?')
-    line = line.replace('!', ' !')
     titles.append(line)
 
 # Slice the number of titles to match the number of labels
