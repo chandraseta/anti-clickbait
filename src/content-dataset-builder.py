@@ -7,6 +7,8 @@ for line in contentfile:
     line = line.strip()
     if line == '':
         line = 'None'
+    if '|' in line:
+        line = line.replace('|', '')
     contents.append(line)
 
 dataframe = pd.DataFrame({'contents': contents})
